@@ -1,0 +1,346 @@
+:root{
+    --principal: #f670ce;
+    --secundar: #671172;
+}
+body {   /*... header...*/
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    scroll-behavior: smooth;
+}
+
+header{
+    background-color: aliceblue;
+    color:var(--principal);
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.logo img {
+    max-width: 150px; /* Adjust the size of your logo */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ff00ff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #3b0458; /* Change to your desired hover color */
+}
+/*... search bar...*/
+.container {
+    position: relative;
+    background: linear-gradient(135deg, rgb(253, 179, 253) 0%, rgb(191, 112, 198) 100%);
+    border-radius: 1000px;
+    padding: 10px;
+    display: grid;
+    place-content: center;
+    z-index: 0;
+    max-width: 300px;
+    margin: 0 10px;
+  }
+  
+  .search-container {
+    position: relative;
+    width: 100%;
+    border-radius: 50px;
+    background: linear-gradient(135deg, rgb(227, 169, 231) 0%, rgb(192, 141, 217) 100%);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-container::after, .search-container::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    position: absolute;
+  }
+  
+  .search-container::before {
+    top: -1px;
+    left: -1px;
+    background: linear-gradient(0deg, rgb(247, 218, 247) 0%, rgb(255, 255, 255) 100%);
+    z-index: -1;
+  }
+  
+  .search-container::after {
+    bottom: -1px;
+    right: -1px;
+    background: linear-gradient(0deg, rgb(240, 163, 255) 0%, rgb(255, 211, 251) 100%);
+    box-shadow: rgba(232, 79, 224, 0.702) 3px 3px 5px 0px, rgba(204, 79, 232, 0.702) 5px 5px 20px 0px;
+    z-index: -2;
+  }
+  
+  .input {
+    padding: 10px;
+    width: 100%;
+    background: linear-gradient(135deg, rgb(247, 218, 247) 0%, rgb(247, 214, 246) 100%);
+    border: none;
+    color: #210133;
+    font-size: 20px;
+    border-radius: 50px;
+  }
+  
+  .input:focus {
+    outline: none;
+    background: linear-gradient(135deg, rgb(255, 239, 254) 0%, rgb(247, 214, 244) 100%);
+  }
+  
+  .search__icon {
+    width: 50px;
+    aspect-ratio: 1;
+    border-left: 2px solid rgb(40, 3, 59);
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-radius: 50%;
+    padding-left: 12px;
+    margin-right: 10px;
+  }
+  
+  .search__icon:hover {
+    border-left: 3px solid rgb(40, 3, 59);
+  }
+  
+  .search__icon path {
+    fill: rgb(40, 3, 59);
+  }
+
+  /*... button sign in...*/
+button {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #03045e;
+    position: absolute;
+    top: 600px; /* Poziția verticală */
+    left: 700px; /* Poziția orizontală */
+    
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+   }
+   
+   button::before,
+   button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+   }
+   
+   button::before {
+    left: -10px;
+    background: #350046;
+   }
+   
+   button::after {
+    right: -10px;
+    background: #75189a;
+   }
+   
+   button:hover::before,
+   button:hover::after {
+    width: 58%;
+   }
+   
+   button:hover span {
+    color: #e0aaff;
+    transition: 0.3s;
+   }
+   
+   button span {
+    color: #03045e;
+    font-size: 18px;
+    transition: all 0.3s ease-in;
+   }
+
+
+ /*... Imagine de fundal...*/
+   .background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%; /* Asigură că imaginea nu depășește lățimea conținătorului */
+    height: auto; /* Menține raportul de aspect al imaginii */
+}
+
+
+     /*... Gallery text...*/
+   h1 {
+    text-align: center;
+    font-size: 5em; /* Mărimea fontului (poate fi ajustată în funcție de preferințe) */
+    color: var(--principal);
+
+   }
+  
+     /*... text...*/
+   h3 {
+    text-align: center;
+    font-size: 1.5em; /* Mărimea fontului (poate fi ajustată în funcție de preferințe) */
+    color: var(--principal);
+
+   }
+    /*... cele 4 imagini ...*/
+    .centered-container {
+      display: flex;
+      justify-content: center; /* Centrează conținutul pe axa orizontală */
+      gap: 20px; /* Spațiu între imagini */
+  }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Coloane care se adaptează automat la conținut */
+      gap: 20px; /* Spațiu între imagini */
+  }
+  
+  .image-grid img {
+      width: 100%; /* Imaginea ocupă întreaga lățime a celulei grilei */
+      height: 100%; /* Imaginea ocupă întreaga înălțime a celulei grilei */
+      object-fit: cover; /* Asigură că imaginea se potrivește în cadrul dimensiunilor definite */
+  }
+  
+
+  /*... text...*/
+h2 {
+  
+  font-size: 2em; /* Mărimea fontului (poate fi ajustată în funcție de preferințe) */
+  color: var(--principal);
+
+ }
+
+   /*... review...*/
+ .card {
+  position: relative;
+  background-color: #310442;
+  padding: 1em;
+  z-index: 5;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  max-width: 300px;
+  transition: 200ms ease-in-out;
+}
+
+.username {
+  color: #C6E1ED;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.body .text {
+  margin: 0 10px 0 0;
+  white-space: pre-line;
+  color: #c0c3d7;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+/*... subsol..*/
+
+.footer {
+  position: relative;
+  width: 100%;
+  color: #9fa4aa;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  margin-top: 10px;
+}
+
+.footer div {
+  margin-right: 1rem;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.footer svg {
+  margin-right: 5px;
+  height: 100%;
+  stroke: #9fa4aa;
+}
+
+.viewer span {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(224, 127, 206);
+  margin-right: -6px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 8px;
+  color: #fff;
+  padding: 2px;
+}
+
+.viewer span svg {
+  stroke: #fff;
+}
+
+.card-grid {
+  display: flex;
+  justify-content: space-between; /* Spațiu egal între carduri */
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 coloane cu lățime egală */
+  gap: 20px; /* Spațiu între elementele grid-ului */
+  padding-top: 20px;
+}
+
+.contact-info {
+  text-align: center;
+  border: 1px solid #ccc; /* Opțional: adăugă un contur pentru a delimita informațiile */
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+
